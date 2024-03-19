@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/css.css" />
+    </head>
+    <body>
+        <header class="main__header">
+            <nav>
+                <div class="left__side">
+                    <h4>SpinCard</h4>
+                </div>
+                <div class="right__side">
+                    <ul>
+                        <li><a href="#">Le score</a></li>
+                        <li><a href="#">A propos</a></li>
+                        <li><a href="#">Aide</a></li>
+                    </ul>
+                    <button>Lancer le jeu</button>
+                </div>
+            </nav>
+        </header>
+
+        <section id="card--section">
+            <div class="cards rotation--mode">
+                <img src="/images/[Copy] Fichier 8@4x.svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(1).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(2).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(3).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(4).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(5).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(6).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" />
+
+                <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" />
+                <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" /> <img src="/images/[Copy] Fichier 8@4x(7).svg" alt="" />
+            </div>
+            <h3>SpinCards</h3>
+            
+        </section>
+        <img src="/images/Layer_1.svg" alt="" class="btn--lancer__le__jeux"
+        />
+        <section class="circle">
+
+        </section>
+        <script>
+            const graph = document.querySelector(".circle");
+
+            const circleElements = document.querySelectorAll("img");
+
+            let angle = 360 - 45;
+            let dangle = 360 / circleElements.length;
+            console.log(circleElements)
+            for (let i = 0; i < circleElements.length; i++) {
+                let circle = circleElements[i];
+                angle += dangle;
+                console.log(angle);
+                circle.style.transform = `rotate(${angle}deg) translate(120px) rotate(-${90}deg)`;
+                circle.style.display = "block";
+                circle.style.transformOrigin = "top";
+            }
+        </script>
+    </body>
+</html>
