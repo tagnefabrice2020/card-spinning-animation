@@ -92,11 +92,6 @@ section {
   bottom: -3rem;
   visibility: hidden;
   opacity: 0;
-  /* 
-  transition-property: bottom, visibility;
-  transition-duration: 5s;
-  transition-delay: 0ms, 200ms;
-  transition-timing-function: ease; */
 }
 
 .cards {
@@ -328,4 +323,27 @@ section.rotation--mode {
 .close {
   padding: 0.78125rem 1.625rem!important;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.show__on__small__screen {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  
+  body > *:not(.show__on__small__screen) {
+    display: none;
+  }
+
+  .show__on__small__screen {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
 }
