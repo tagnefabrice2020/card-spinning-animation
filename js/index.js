@@ -4,7 +4,6 @@ const currentIndicatorIndexContainer = document.querySelector(
 const cardSection = document.querySelector("#card--section");
 const cardNames = document.querySelectorAll(".card__names h3");
 let originalCardPositions = []; // Store original card positions
-let originalCardTransforms = [];
 
 let circleElements;
 currentIndex = 0;
@@ -15,12 +14,8 @@ function storeOriginalCardPositions() {
   originalCardPositions = Array.from(cards).map((card) => ({
     top: card.offsetTop,
     left: card.offsetLeft,
+    transform: getTransformValue(card)
   }));
-  originalCardTransforms = Array.from(cards).map((card) => ({
-    transform: getTransformValue(card),
-  }));
-
-  console.log(originalCardPositions);
 }
 
 // Helper function to get the computed transform value
@@ -36,7 +31,7 @@ function resetCardPositions() {
   cards.forEach((card, index) => {
     card.style.top = originalCardPositions[index].top + "px";
     card.style.left = originalCardPositions[index].left + "px";
-    card.style.transform = originalCardTransforms[index].transform;
+    card.style.transform = originalCardPositions[index].transform;
     card.style.transformOrigin = "bottom";
   });
 }4

@@ -293,7 +293,7 @@ section.rotation--mode {
   overflow: hidden;
   visibility: hidden;
   opacity: 0;
-  transition-property: opacity, visibility;
+  transition-property: opacity, visibility, top;
   transition-duration: 300ms;
   transition-delay: 100ms;
   transition-timing-function: ease;
@@ -323,4 +323,9 @@ section.rotation--mode {
   left: 50%;
   transform: translate(-50%);
   font-weight: bold;
+}
+
+.close {
+  padding: 0.78125rem 1.625rem!important;
+  font-weight: 700;
 }
